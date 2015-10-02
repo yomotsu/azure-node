@@ -2,24 +2,13 @@
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
-// var io = require('../..')(server);
-// New:
 var io = require('socket.io')(server);
 var port = process.env.PORT || 3000;
 
-server.listen(port, function () {
-  console.log('Server listening at port %d', port);
-});
+server.listen(port, function () {});
 
-// Routing
-// app.use(express.static(__dirname + '/public'));
-
-// Chatroom
-
-// usernames which are currently connected to the chat
-// var usernames = {};
-// var numUsers = 0;
-
+// io.set( 'transports', [ 'websocket' ] );
+// io.set( 'origins', '*:*' );
 
 io.on( 'connection', function ( socket ) {
 
