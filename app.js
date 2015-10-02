@@ -3,7 +3,7 @@ var http = require('http');
 var port = process.env.PORT || 80;
 // var port = 80;
 
-// var express = require('express');
+var express = require('express');
 // var app = express();
 // var server = http.createServer(app);
 var io = require('socket.io');//.listen( port );
