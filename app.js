@@ -1,14 +1,11 @@
-// Setup basic express server
-var express = require('express');
-var app = express();
-var server = require('http').createServer();
-var io = require('socket.io')(server);
-var port = process.env.PORT || 3000;
+var server = require( 'http' ).createServer();
+var io     = require( 'socket.io' )( server );
+var port   = process.env.PORT || 3000;
 
-server.listen(port, function () {});
+server.listen( port );
 
-// io.set( 'transports', [ 'websocket' ] );
-// io.set( 'origins', '*:*' );
+io.set( 'transports', [ 'websocket' ] );
+io.set( 'origins', '*:*' );
 
 io.on( 'connection', function ( socket ) {
 
