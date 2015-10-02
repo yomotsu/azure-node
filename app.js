@@ -1,13 +1,13 @@
 
 var express = require('express');
 var app = express();
-var server = require('http').createServer(app);
+// var server = require('http').createServer(app);
 // var io = require('../..')(server);
 // New:
-var io = require('socket.io')(server);
+// var io = require('socket.io')(server);
 var port = process.env.PORT || 443;
 
-// var http = require('http');
+var http = require('http');
 
 // var port = process.env.PORT || 80;
 // // var port = 80;
@@ -20,12 +20,12 @@ var port = process.env.PORT || 443;
 // io.set( 'transports', [ 'websocket' ] );
 // io.set( 'origins', '*:*' );
 
-// http.createServer(function(req, res) {
+http.createServer(function(req, res) {
 
-//   res.writeHead(200, { 'Content-Type': 'text/plain' });
-//   res.end('Hello World4\n');
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Hello World4\n');
 
-// }).listen(port);
+}).listen(port);
 
 
 // io.on( 'connection', function ( socket ) {
