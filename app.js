@@ -1,10 +1,10 @@
 
 var express = require('express');
 var app = express();
-// var server = require('http').createServer(app);
+var server = require('http').createServer(app);
 // var io = require('../..')(server);
 // New:
-// var io = require('socket.io')(server);
+var io = require('socket.io')(server);
 // var port = process.env.PORT || 443;
 
 var port = process.env.PORT || 3000;
@@ -17,7 +17,7 @@ var port = process.env.PORT || 3000;
 // var app = express();
 // // var server = http.createServer(app);
 
-var io = require( 'socket.io' ).listen( port );
+// var io = require( 'socket.io' ).listen( port );
 
 // io.set( 'transports', [ 'websocket' ] );
 // io.set( 'origins', '*:*' );
@@ -45,4 +45,4 @@ var io = require( 'socket.io' ).listen( port );
 // });
 
 
-// io.listen( port );
+io.listen( port );
