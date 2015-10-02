@@ -20,12 +20,12 @@ var http = require('http');
 // io.set( 'transports', [ 'websocket' ] );
 // io.set( 'origins', '*:*' );
 
-http.createServer(function(req, res) {
+// http.createServer(function(req, res) {
 
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Hello World4\n');
+//   res.writeHead(200, { 'Content-Type': 'text/plain' });
+//   res.end('Hello World4\n');
 
-}).listen(port);
+// }).listen(port);
 
 
 // io.on( 'connection', function ( socket ) {
