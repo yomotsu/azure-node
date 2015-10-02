@@ -1,12 +1,21 @@
-var http = require('http');
-
-var port = process.env.PORT || 80;
-// var port = 80;
 
 var express = require('express');
 var app = express();
-// var server = http.createServer(app);
-var io = require('socket.io');
+var server = require('http').createServer(app);
+// var io = require('../..')(server);
+// New:
+var io = require('socket.io')(server);
+var port = process.env.PORT || 443;
+
+// var http = require('http');
+
+// var port = process.env.PORT || 80;
+// // var port = 80;
+
+// var express = require('express');
+// var app = express();
+// // var server = http.createServer(app);
+// var io = require('socket.io');
 
 // io.set( 'transports', [ 'websocket' ] );
 // io.set( 'origins', '*:*' );
