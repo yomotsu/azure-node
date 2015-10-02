@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<form id="form"><input></form>
+<form id="form"><input id="input"></form>
 <div id="log"></div>
 
 <script>
@@ -21,7 +21,8 @@ var $input = $( '#input' );
 var $log   = $( '#log' );
 
 $form.submit( function () {
-
+  
+  console.log( val );
   socket.emit( 'msg', $input.val() );
   $input.val( '' );
 
