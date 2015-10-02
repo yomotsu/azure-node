@@ -16,16 +16,16 @@ http.createServer(function(req, res) {
 
 
 
-io.on( 'connection', function ( socket ) {
+// io.on( 'connection', function ( socket ) {
 
-  console.log( 'connected' );
+//   console.log( 'connected' );
 
-  socket.on( 'msg', function( data ) {
-    io.emit( 'msg', data );
-  } );
+//   socket.on( 'msg', function( data ) {
+//     io.emit( 'msg', data );
+//   } );
 
-  socket.on( 'disconnect', function () {
-    console.log( 'disconnected' );
-  } );
+//   socket.on( 'disconnect', function () {
+//     console.log( 'disconnected' );
+//   } );
 
-});
+// });
