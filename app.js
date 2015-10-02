@@ -12,13 +12,13 @@ server.listen(port, function () {
 });
 
 // Routing
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
 
 // Chatroom
 
 // usernames which are currently connected to the chat
-var usernames = {};
-var numUsers = 0;
+// var usernames = {};
+// var numUsers = 0;
 
 
 io.on( 'connection', function ( socket ) {
