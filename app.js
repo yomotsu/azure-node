@@ -1,6 +1,7 @@
 var http = require('http');
-// var port = process.env.PORT || 80;
-var port = 80;
+
+var port = process.env.PORT || 80;
+// var port = 80;
 
 // var express = require('express');
 // var app = express();
@@ -17,7 +18,7 @@ http.createServer(function(req, res) {
 
 }).listen(port);
 
-io.listen( port )
+// io.listen( port )
 
 // io.on( 'connection', function ( socket ) {
 
